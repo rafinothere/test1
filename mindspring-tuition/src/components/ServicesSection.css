@@ -1,0 +1,104 @@
+.services-section {
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.services-section h2 {
+  font-size: 1.8rem;
+  color: #002f5f;
+  margin-bottom: 3rem;
+  font-weight: bold;
+}
+
+.service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.service-card {
+  background-color: #083b5c;
+  color: white;
+  border-radius: 15px;
+  padding: 2rem 1.5rem;
+  width: 300px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card .icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: -60px auto 1rem auto;
+  background-color: #fff;
+}
+
+/* You can customize these to add visuals or images */
+.icon1 {
+  background: #fcd34d; /* Yellow */
+}
+
+.icon2 {
+  background: #fdba74; /* Orange */
+}
+
+.icon3 {
+  background: #60a5fa; /* Light Blue */
+}
+
+.service-card h3 {
+  font-size: 1.25rem;
+  margin: 1rem 0 0.5rem;
+  font-weight: bold;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: #d1d5db;
+  margin-bottom: 1.5rem;
+}
+
+.service-btn {
+  padding: 0.6rem 1.2rem;
+  font-weight: bold;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.service-btn.yellow {
+  background-color: #fcd34d;
+  color: #002f5f;
+}
+
+.service-btn.orange {
+  background-color: #fdba74;
+  color: #002f5f;
+}
+
+.service-btn.navy {
+  background-color: #60a5fa;
+  color: #002f5f;
+}
+
+.service-btn:hover {
+  opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .service-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+

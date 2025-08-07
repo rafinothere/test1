@@ -1,0 +1,175 @@
+/* Navbar core styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: white;
+  position: relative;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 50px;
+  margin-right: 10px;
+}
+
+.brand h1 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: #002f5f;
+}
+
+.brand span {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #002f5f;
+  font-weight: 500;
+}
+
+/* Book Classes button */
+.book-btn {
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #002f5f;
+  transition: 0.3s;
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown-label {
+  color: #002f5f;
+  font-weight: 500;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 2rem;
+  left: 0;
+  background: white;
+  padding: 1rem;
+  list-style: none;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  z-index: 1002;
+  min-width: 160px;
+}
+
+.dropdown-menu.visible {
+  display: block;
+}
+
+.dropdown-menu li {
+  padding: 0.5rem 0;
+}
+
+.dropdown-menu li a {
+  text-decoration: none;
+  color: #002f5f;
+  font-weight: 500;
+}
+
+/* Mobile Nav */
+.close-btn {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 2.5rem;
+  background: none;
+  border: none;
+  color: #002f5f;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 1001;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 75%;
+    background: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.3s ease;
+    z-index: 999;
+  }
+
+  .nav-links.open {
+    right: 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(8px);
+    z-index: 998;
+  }
+
+  .close-btn {
+    display: block;
+  }
+
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .dropdown-menu li {
+    text-align: center;
+    padding: 0.75rem 0;
+  }
+}
+
