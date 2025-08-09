@@ -147,67 +147,6 @@
   transform: translateX(-50%) scale(0.9);
 }
 
-/* MODERN NAVIGATION ARROWS */
-.carousel-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.9);
-  color: #003366;
-  border: none;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  font-size: 1.2rem;
-  cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 10;
-  outline: none;
-  box-shadow: 0 4px 12px rgba(0, 51, 102, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  backdrop-filter: blur(10px);
-  opacity: 0;
-  visibility: hidden;
-}
-
-/* Show arrows on hover */
-.carousel-container:hover .carousel-arrow {
-  opacity: 1;
-  visibility: visible;
-}
-
-.carousel-arrow:hover {
-  background: rgba(255, 255, 255, 1);
-  transform: translateY(-50%) scale(1.05);
-  box-shadow: 0 6px 20px rgba(0, 51, 102, 0.15);
-  color: #003366;
-}
-
-.carousel-arrow:active {
-  transform: translateY(-50%) scale(0.95);
-}
-
-.carousel-arrow--left {
-  left: 20px;
-}
-
-.carousel-arrow--right {
-  right: 20px;
-}
-
-/* Use proper arrow symbols */
-.carousel-arrow--left::before {
-  content: "←";
-  font-weight: 300;
-}
-
-.carousel-arrow--right::before {
-  content: "→";
-  font-weight: 300;
-}
-
 /* MODERN NAVIGATION DOTS */
 .carousel-dots {
   position: absolute;
@@ -347,22 +286,6 @@
 
   .position-1 {
     transform: translate(-50%, -50%) translateX(110px) scale(0.7);
-  }
-
-  .carousel-arrow {
-    width: 40px;
-    height: 40px;
-    font-size: 1rem;
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .carousel-arrow--left {
-    left: 10px;
-  }
-
-  .carousel-arrow--right {
-    right: 10px;
   }
 
   .carousel-dots {

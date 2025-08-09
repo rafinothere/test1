@@ -22,14 +22,6 @@ function HeroSection() {
     return () => clearInterval(interval);
   }, [slides.length]);
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
-
   const goToSlide = (index) => {
     setCurrentSlide(index);
   };
@@ -72,20 +64,6 @@ function HeroSection() {
                 </div>
               );
             })}
-
-            {/* Modern Navigation Arrows - Clean without symbols in JSX */}
-            <button 
-              className="carousel-arrow carousel-arrow--left"
-              onClick={prevSlide}
-              aria-label="Previous slide"
-            >
-            </button>
-            <button 
-              className="carousel-arrow carousel-arrow--right"
-              onClick={nextSlide}
-              aria-label="Next slide"
-            >
-            </button>
 
             {/* Modern Navigation Dots */}
             <div className="carousel-dots">
