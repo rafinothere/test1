@@ -33,21 +33,9 @@ const Navbar = () => {
                 11+ Exam
               </Link>
             </li>
-            <li>
-              <Link to="/english" onClick={() => { setIsOpen(false); setDropdownOpen(false); }}>
-                English
-              </Link>
-            </li>
-            <li>
-              <Link to="/maths" onClick={() => { setIsOpen(false); setDropdownOpen(false); }}>
-                Maths
-              </Link>
-            </li>
-            <li>
-              <Link to="/science" onClick={() => { setIsOpen(false); setDropdownOpen(false); }}>
-                Science
-              </Link>
-            </li>
+            <li><a href="#">English</a></li>
+            <li><a href="#">Maths</a></li>
+            <li><a href="#">Science</a></li>
           </ul>
         </div>
 
