@@ -1,14 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import './HeroSection.css';
 import boyImage from '../assets/student-boy.jpg';
+import mathImage from '../assets/maths-tutoring.jpg';
+import englishImage from '../assets/english.jpg';
+import scienceImage from '../assets/science.jpg';
+import examTechniqueImage from '../assets/examtechnique.jpg';
 
 function HeroSection() {
   const slides = [
-    { id: 1, image: boyImage, alt: 'Student studying', title: 'Math Tutoring' },
+    { id: 1, image: mathImage, alt: 'Student studying math', title: 'Math Tutoring' },
     { id: 2, image: boyImage, alt: 'Student learning', title: '11+ Preparation' },
-    { id: 3, image: boyImage, alt: 'Student working', title: 'English Support' },
-    { id: 4, image: boyImage, alt: 'Student reading', title: 'Science Help' },
-    { id: 5, image: boyImage, alt: 'Student practicing', title: 'Exam Technique' }
+    { id: 3, image: englishImage, alt: 'Student working on English', title: 'English Support' },
+    { id: 4, image: scienceImage, alt: 'Student studying science', title: 'Science Help' },
+    { id: 5, image: examTechniqueImage, alt: 'Student practicing exam techniques', title: 'Exam Technique' }
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
