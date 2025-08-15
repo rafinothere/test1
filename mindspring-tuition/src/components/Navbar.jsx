@@ -39,6 +39,13 @@ const Navbar = () => {
           </ul>
         </div>
 
+<li>
+  <Link to="/offer" onClick={() => { setIsOpen(false); setDropdownOpen(false); }}>
+    What We Offer
+  </Link>
+</li>
+
+
         <Link to="/about" onClick={() => setIsOpen(false)}>About Us</Link>
         <Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
 

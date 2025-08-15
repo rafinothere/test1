@@ -1,3 +1,4 @@
+/* ---------- Hero ---------- */
 .hero-section {
   display: flex;
   justify-content: space-between;
@@ -38,6 +39,9 @@
   border-radius: 20px;
 }
 
+
+
+/* ---------- Services Preview ---------- */
 .home-services-preview {
   padding: 4rem 2rem;
   background: #f9f9f9;
@@ -90,5 +94,10 @@
   font-weight: bold;
   border-radius: 30px;
   cursor: pointer;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 980px){
+  .services-cards { flex-direction: column; align-items: center; }
 }
 
