@@ -1,0 +1,86 @@
+/* ---------------- Section (safe waves behind content) ---------------- */
+.sci-section{
+  position: relative;
+  padding: clamp(2rem, 5vw, 3.5rem) 1rem;
+  background: linear-gradient(180deg, #f9fbff 0%, #f3f7fc 100%);
+  overflow: hidden;                 /* keeps waves clipped nicely */
+}
+
+/* put the soft waves BEHIND using ::before */
+.sci-section::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(1100px 380px at -10% 110%, #F7FAFF 60%, transparent 61%) no-repeat,
+    radial-gradient(1100px 380px at 110% -10%, #F7FAFF 60%, transparent 61%) no-repeat;
+  z-index: 0;                       /* <-- behind content */
+  pointer-events: none;
+}
+
+/* content sits above the background */
+.sci-wrap{ max-width:1120px; margin:0 auto; position: relative; z-index: 1; }
+
+/* ---------------- Header ---------------- */
+.sci-head{ margin-bottom:1.8rem; }
+.sci-pill{
+  display:inline-block; background:linear-gradient(90deg,#ffcf33,#ffb300);
+  color:#0F172A; font-weight:800; padding:.45rem .9rem; border-radius:999px;
+  box-shadow:0 6px 18px rgba(0,0,0,.06); font-size:.9rem;
+}
+.sci-head h1{ margin:.7rem 0 .45rem; font-size:clamp(1.9rem,3.2vw,2.6rem); color:#0F172A; letter-spacing:-.02em; }
+.sci-lead{ max-width:62ch; color:#5b6779; line-height:1.6; font-size:1.05rem; }
+
+/* ---------------- Card ---------------- */
+.sci-card{
+  background:#fff; border-radius:20px; box-shadow:0 16px 50px rgba(15,23,42,.10);
+  padding: clamp(1.2rem, 2.4vw, 1.8rem);
+  display:grid; grid-template-columns:1.15fr .85fr; align-items:center;
+  gap:clamp(1rem,3vw,2rem); transition:transform .2s, box-shadow .2s;
+}
+.sci-card:hover{ transform:translateY(-3px); box-shadow:0 22px 60px rgba(15,23,42,.12); }
+
+.sci-content{ min-width:260px; }
+.sci-block + .sci-block{ margin-top:1.35rem; }
+.sci-sub{ margin:0 0 .6rem; font-size:clamp(1.15rem,2.2vw,1.4rem); color:#0F172A; font-weight:700; }
+
+/* dot list */
+.sci-list{ list-style:none; padding:0; margin:0; color:#334155; font-size:.98rem; }
+.sci-list li{ display:flex; align-items:center; gap:.55rem; padding:.4rem 0; }
+.dot{ width:.7rem; height:.7rem; border-radius:50%; display:inline-block; box-shadow:0 2px 6px rgba(0,0,0,.08); }
+.blue{background:#2BA9FF;} .purple{background:#8B5CF6;} .green{background:#22C55E;} .amber{background:#F59E0B;} .pink{background:#FB7185;}
+
+/* checks */
+.sci-checks{ list-style:none; padding:0; margin:.25rem 0 0; color:#334155; font-size:.98rem; }
+.sci-checks li{ position:relative; padding:.45rem 0 .45rem 1.6rem; }
+.sci-checks li::before{
+  content:"✓"; position:absolute; left:0; top:.35rem; width:1.1rem; height:1.1rem; border-radius:4px;
+  display:grid; place-items:center; font-size:.8rem; font-weight:900;
+  color:#22C55E; background:rgba(34,197,94,.12);
+}
+
+/* CTA */
+.sci-cta{ margin-top:1.1rem; display:grid; gap:.5rem; }
+.sci-btn{
+  display:inline-block; text-decoration:none; background:linear-gradient(90deg,#ffcf33,#ffb300);
+  color:#0F172A; font-weight:800; padding:.85rem 1.4rem; border-radius:999px;
+  box-shadow:0 12px 28px rgba(0,0,0,.08); transition:transform .15s, box-shadow .15s;
+}
+.sci-btn:hover{ transform:translateY(-2px); box-shadow:0 16px 30px rgba(0,0,0,.1); }
+.sci-note{ color:#6b7b91; font-size:.92rem; }
+
+/* image */
+.sci-figure{ margin:0; border-radius:16px; overflow:hidden; box-shadow:0 14px 36px rgba(2,8,23,.12); background:#0B132A08; }
+.sci-figure img{ width:100%; height:auto; display:block; transition:transform .3s; }
+.sci-figure:hover img{ transform:scale(1.03); }
+
+/* responsive */
+@media (max-width:980px){
+  .sci-card{ grid-template-columns:1fr; }
+  .sci-figure{ order:-1; }
+}
+@media (max-width:640px){
+  .sci-btn{ width:100%; text-align:center; }
+}
+
+

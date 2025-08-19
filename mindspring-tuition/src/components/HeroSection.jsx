@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './HeroSection.css';
 import boyImage from '../assets/student-boy.jpg';
 import mathImage from '../assets/maths-tutoring.jpg';
@@ -22,13 +23,10 @@ function HeroSection() {
     const interval = setInterval(() => {
       setCurrentSlide(prev => (prev + 1) % slides.length);
     }, 3000);
-
     return () => clearInterval(interval);
   }, [slides.length]);
 
-  const goToSlide = (index) => {
-    setCurrentSlide(index);
-  };
+  const goToSlide = (index) => setCurrentSlide(index);
 
   return (
     <section className="hero">
@@ -36,40 +34,33 @@ function HeroSection() {
         <div className="hero-text">
           <h1>Achieve 11+ Success with Confidence</h1>
           <p>Tailored lessons, expert tutors, and a proven track record of results.</p>
-          <button>📘 Contact Us</button>
+
+          {/* Contact button now routes to /contact */}
+          <Link to="/contact" className="cta-button">
+            📘 Contact Us
+          </Link>
         </div>
-        
+
         <div className="hero-image">
           <div className="carousel-container">
-            {/* Create all slides that will smoothly animate positions */}
             {slides.map((slide, index) => {
-              // Calculate position relative to current slide
               let position = index - currentSlide;
               if (position < -2) position += slides.length;
               if (position > 2) position -= slides.length;
-              
+
               return (
-                <div 
-                  key={index}
+                <div
+                  key={slide.id}
                   className={`carousel-slide position-${position}`}
-                  style={{
-                    '--position': position
-                  }}
+                  style={{ '--position': position }}
                   onClick={() => goToSlide(index)}
                 >
-                  <img 
-                    src={slide.image} 
-                    alt={slide.alt}
-                    className="slide-img"
-                  />
-                  <div className="slide-label">
-                    {slide.title}
-                  </div>
+                  <img src={slide.image} alt={slide.alt} className="slide-img" />
+                  <div className="slide-label">{slide.title}</div>
                 </div>
               );
             })}
 
-            {/* Modern Navigation Dots */}
             <div className="carousel-dots">
               {slides.map((_, index) => (
                 <button
@@ -88,3 +79,4 @@ function HeroSection() {
 }
 
 export default HeroSection;
+

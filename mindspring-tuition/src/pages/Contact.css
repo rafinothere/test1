@@ -1,0 +1,256 @@
+/* Page shell */
+.contact-page {
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Header */
+.contact-header {
+  text-align: center;
+  margin-bottom: clamp(1.6rem, 4vw, 2.2rem);
+}
+.contact-header h1 {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  margin-bottom: 0.5rem;
+  color: #0f172a;
+}
+.contact-header p {
+  color: #475569;
+  font-size: clamp(1rem, 1.5vw, 1.1rem);
+}
+
+/* Info cards */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: clamp(1rem, 2vw, 1.5rem);
+  margin-bottom: clamp(1.6rem, 3vw, 2rem);
+}
+.contact-card {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(2, 8, 23, 0.06);
+}
+.contact-card h2 {
+  margin-bottom: 0.35rem;
+  color: #0f172a;
+  font-size: 1.15rem;
+}
+.contact-card p,
+.contact-card a {
+  color: #475569;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+/* Socials strip */
+.contact-socials {
+  margin-top: clamp(1.6rem, 3vw, 2.2rem);
+  background: #0f172a;
+  border-radius: 20px;
+  color: #e6edf5;
+  box-shadow: 0 20px 60px rgba(2, 8, 23, 0.25);
+  overflow: hidden;
+}
+.socials-wrap {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: clamp(1.4rem, 3vw, 2rem) 1rem;
+  text-align: center;
+}
+.contact-socials h2 {
+  margin: 0 0 0.8rem;
+  font-size: clamp(1.6rem, 2.6vw, 2.1rem);
+  letter-spacing: -0.02em;
+  color: #eaf1ff;
+}
+.socials-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(0.9rem, 2vw, 1.2rem);
+  margin: 0.6rem 0 1.2rem;
+}
+
+/* round icon buttons */
+.soc {
+  width: 72px;
+  height: 72px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25), inset 0 0 0 3px #0f172a;
+  transform: translateY(0);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+}
+.soc:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.3), inset 0 0 0 3px #0f172a;
+  filter: brightness(1.05);
+}
+
+/* brand colors */
+.soc.ig {
+  background: radial-gradient(
+    circle at 30% 110%,
+    #feda75 0%,
+    #fa7e1e 35%,
+    #d62976 55%,
+    #962fbf 75%,
+    #4f5bd5 100%
+  );
+}
+.soc.mail {
+  background: #1e88e5;
+}
+
+.availability h3 {
+  margin: 0.4rem 0 0.2rem;
+  font-size: 1.05rem;
+  color: #f2f6ff;
+}
+.availability p {
+  margin: 0;
+  color: #b9c6d9;
+}
+
+/* Contact form */
+/* Apply same base style for all inputs + textarea */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;                  /* full width of the grid cell */
+  padding: 14px 16px;           /* comfy padding */
+  border: 1px solid #d1d5db;    /* subtle grey border */
+  border-radius: 10px;          /* smooth rounded corners */
+  background: #f9fafb;          /* light grey background */
+  font-size: 16px;              /* readable text */
+  line-height: 1.5;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;       /* ensures padding doesn't shrink the box */
+}
+
+/* Focus effect for accessibility */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #ffb300;        /* your brand yellow */
+  box-shadow: 0 0 0 3px rgba(255, 179, 0, 0.25);
+}
+
+/* Labels */
+.contact-form label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* Give each field some breathing room */
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+/* Larger textarea */
+.contact-form textarea {
+  min-height: 140px;  /* tall enough for readability */
+  resize: vertical;   /* allow vertical resizing only */
+}
+
+/* Grid tweak: Name + Email sit side by side nicely */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;   /* breathing space between fields */
+}
+
+.field.full {
+  grid-column: 1 / -1; /* spans full width for Phone + Message + Checkbox */
+}
+
+/* errors */
+.has-error input,
+.has-error textarea {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.12);
+  background: #fff;
+}
+.error {
+  margin-top: 0.35rem;
+  color: #b91c1c;
+  font-size: 0.92rem;
+}
+
+/* submit */
+.submit-btn {
+  margin-top: 0.6rem;
+  display: inline-block;
+  background: linear-gradient(90deg, #ffcf33, #ffb300);
+  color: #0f172a;
+  font-weight: 800;
+  padding: 0.9rem 1.5rem;
+  border-radius: 999px;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+  border: none;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.1);
+}
+
+.sent-note {
+  margin-top: 0.7rem;
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+/* responsive */
+@media (max-width: 680px) {
+  .form-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 520px) {
+  .soc { width: 64px; height: 64px; }
+}
+
+/* Checkbox row alignment */
+.field.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;           /* lets the error wrap below on small screens */
+  margin-top: 6px;
+}
+
+.field.checkbox input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #ffb300;     /* brand-coloured checkbox (modern browsers) */
+}
+
+.field.checkbox label {
+  cursor: pointer;
+  color: #0f172a;
+  line-height: 1.5;
+}
+
+/* Make the error sit underneath, aligned with the text */
+.field.checkbox .error {
+  flex-basis: 100%;
+  margin-left: 32px;         /* lines up under the label text, not under the box */
+}
+
+/* Optional: tighten spacing on very small screens */
+@media (max-width: 480px) {
+  .field.checkbox .error {
+    margin-left: 0;
+  }
+}

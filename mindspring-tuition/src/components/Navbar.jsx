@@ -9,6 +9,7 @@ const Navbar = () => {
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
+  const closeAll = () => { setIsOpen(false); setDropdownOpen(false); };
 
   return (
     <header className="navbar">
@@ -20,45 +21,46 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className={`nav-links ${isOpen ? 'open' : ''}`}>
+      <nav className={`nav-links ${isOpen ? 'open' : ''}`}>
         {isOpen && <button className="close-btn" onClick={toggleMenu}>×</button>}
 
-        <Link to="/" onClick={() => setIsOpen(false)}>Home</Link>
+        <Link to="/" onClick={closeAll}>Home</Link>
 
         <div className="dropdown" onClick={toggleDropdown}>
           <span className="dropdown-label">Services ▾</span>
           <ul className={`dropdown-menu ${dropdownOpen ? 'visible' : ''}`}>
             <li>
-              <Link to="/elevenplus" onClick={() => { setIsOpen(false); setDropdownOpen(false); }}>
-                11+ Exam
-              </Link>
+              <Link to="/elevenplus" onClick={closeAll}>11+ Exam</Link>
             </li>
-            <li><a href="#">English</a></li>
-            <li><a href="#">Maths</a></li>
-            <li><a href="#">Science</a></li>
+            <li>
+              <Link to="/english" className="dropdown-link" onClick={closeAll}>English</Link>
+            </li>
+            <li>
+              <Link to="/maths" className="dropdown-link" onClick={closeAll}>Maths</Link>
+            </li>
+            <li>
+              <Link to="/science" className="dropdown-link" onClick={closeAll}>Science</Link>
+            </li>
           </ul>
         </div>
 
-<li>
-  <Link to="/offer" onClick={() => { setIsOpen(false); setDropdownOpen(false); }}>
-    What We Offer
-  </Link>
-</li>
+        <Link to="/offer" onClick={closeAll}>What We Offer</Link>
+        <Link to="/about" onClick={closeAll}>About Us</Link>
+        <Link to="/contact" onClick={closeAll}>Contact</Link>
 
+        {/* Book Classes now routes to /contact */}
+        <Link to="/contact" className="book-btn" onClick={closeAll}>
+          Book Classes
+        </Link>
+      </nav>
 
-        <Link to="/about" onClick={() => setIsOpen(false)}>About Us</Link>
-        <Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
+      <button className="hamburger" onClick={toggleMenu} aria-label="Open menu">
+        <span className="bar" />
+        <span className="bar" />
+        <span className="bar" />
+      </button>
 
-        <button className="book-btn">Book Classes</button>
-      </div>
-
-      <div className="hamburger" onClick={toggleMenu}>
-        <div className="bar"></div>
-        <div className="bar"></div>
-        <div className="bar"></div>
-      </div>
-
-      {isOpen && <div className="backdrop" onClick={toggleMenu}></div>}
+      {isOpen && <div className="backdrop" onClick={toggleMenu} />}
     </header>
   );
 };

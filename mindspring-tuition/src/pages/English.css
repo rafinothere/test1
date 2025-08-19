@@ -1,0 +1,114 @@
+/* ===== English page (SAFE VERSION) ===== */
+
+/* 1) Background: keep the nice gradients, remove masks & dangerous overflow  */
+.eng-page{
+  position: relative;
+  padding: clamp(2rem, 5vw, 3.5rem) 1rem 2.5rem;
+  background:
+    radial-gradient(1100px 380px at -10% 110%, #F7FAFF 60%, transparent 61%) no-repeat,
+    radial-gradient(1100px 380px at 110% -10%, #F7FAFF 60%, transparent 61%) no-repeat,
+    linear-gradient(180deg,#f9fbff 0%, #f3f7fc 100%);
+  /* ❌ remove mask & overflow that could hide content */
+  /* mask: none; -webkit-mask: none; overflow: visible; */
+}
+
+/* 2) Content always sits above decorative layers */
+.eng-wrap{ max-width:1120px; margin:0 auto; position:relative; z-index:2; }
+
+/* Header */
+.eng-head{ margin-bottom:1.8rem; }
+.eng-pill{
+  display:inline-block;
+  background: linear-gradient(90deg, #ffcf33, #ffb300);
+  color:#0F172A; font-weight:800;
+  padding:.45rem .9rem; border-radius:999px;
+  box-shadow:0 6px 18px rgba(0,0,0,.06); font-size:.9rem;
+}
+.eng-head h1{
+  margin:.7rem 0 .45rem;
+  font-size: clamp(1.9rem, 3.2vw, 2.6rem);
+  color:#0F172A; letter-spacing:-.02em;
+}
+.eng-lead{ max-width:58ch; color:#5b6779; font-size:1.05rem; line-height:1.6; }
+
+/* Main card */
+.eng-card{
+  background:#fff; border-radius:20px;
+  box-shadow:0 16px 50px rgba(15,23,42,.10);
+  padding: clamp(1.2rem, 2.4vw, 1.8rem);
+  display:grid; grid-template-columns:1.15fr .85fr;
+  align-items:center; gap: clamp(1rem, 3vw, 2rem);
+  transition:transform .2s ease, box-shadow .2s ease;
+  position: relative; z-index:2;
+}
+.eng-card:hover{ transform:translateY(-3px); box-shadow:0 22px 60px rgba(15,23,42,.12); }
+
+.eng-content{ min-width:260px; }
+.eng-block + .eng-block{ margin-top:1.3rem; }
+.eng-sub{ margin:0 0 .6rem; font-size: clamp(1.15rem, 2.2vw, 1.4rem); color:#0F172A; font-weight:700; }
+
+/* Dot list */
+.eng-list{ list-style:none; padding:0; margin:0; color:#334155; font-size:.98rem; }
+.eng-list li{ display:flex; align-items:center; gap:.55rem; padding:.4rem 0; }
+.eng-dot{ width:.7rem; height:.7rem; border-radius:50%; box-shadow:0 2px 6px rgba(0,0,0,.08); }
+.eng-blue{background:#2BA9FF;} .eng-purple{background:#8B5CF6;}
+.eng-amber{background:#F59E0B;} .eng-pink{background:#FB7185;} .eng-green{background:#22C55E;}
+
+/* Checks */
+.eng-checks{ list-style:none; padding:0; margin:.25rem 0 0; color:#334155; font-size:.98rem; }
+.eng-checks li{ position:relative; padding:.45rem 0 .45rem 1.6rem; }
+.eng-checks li::before{
+  content:"✓"; position:absolute; left:0; top:.35rem;
+  width:1.1rem; height:1.1rem; border-radius:4px;
+  display:grid; place-items:center; font-size:.8rem; font-weight:900;
+  color:#22C55E; background:rgba(34,197,94,.12);
+}
+
+/* CTA */
+.eng-cta{ margin-top:1.1rem; display:grid; gap:.5rem; }
+.eng-btn{
+  display:inline-block; text-decoration:none;
+  background: linear-gradient(90deg,#ffcf33,#ffb300);
+  color:#0F172A; font-weight:800;
+  padding:.85rem 1.4rem; border-radius:999px;
+  box-shadow:0 12px 28px rgba(0,0,0,.08);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.eng-btn:hover{ transform:translateY(-2px); box-shadow:0 16px 30px rgba(0,0,0,.1); }
+.eng-note{ color:#6b7b91; font-size:.92rem; }
+
+/* Image */
+.eng-figure{
+  margin:0; border-radius:16px; overflow:hidden;
+  box-shadow:0 14px 36px rgba(2,8,23,.12); background:#0B132A08;
+  position:relative; z-index:2;
+}
+.eng-figure img{ width:100%; height:auto; display:block; transition:transform .3s ease; }
+.eng-figure:hover img{ transform:scale(1.03); }
+
+/* Mini cards row */
+.eng-mini{
+  margin-top: clamp(1.2rem, 3vw, 1.8rem);
+  display:grid; grid-template-columns:repeat(3,1fr);
+  gap: clamp(.8rem,2.2vw,1.2rem);
+  position:relative; z-index:2;
+}
+.mini-card{
+  background:#ffffff; border-radius:16px;
+  padding:1.1rem 1.2rem;
+  box-shadow:0 12px 36px rgba(2,8,23,.06);
+}
+.mini-card h3{ margin:.2rem 0 .4rem; color:#0F172A; font-size:1.05rem; }
+.mini-card p{ color:#475569; font-size:.95rem; line-height:1.55; }
+
+/* Decorative bottom wave stays under content */
+.eng-wave{ position:absolute; bottom:-1px; left:0; width:100%; line-height:0; z-index:1; }
+.eng-wave svg{ display:block; width:100%; height:70px; }
+
+/* Responsive */
+@media (max-width:980px){
+  .eng-card{ grid-template-columns:1fr; }
+  .eng-figure{ order:-1; }
+  .eng-mini{ grid-template-columns:1fr; }
+}
+

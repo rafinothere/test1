@@ -3,44 +3,54 @@ import "./Offer.css";
 
 export default function Offer() {
   return (
-    <section className="offer-zone" aria-labelledby="offer-title">
-      <div className="oz-wrap">
-        <header className="oz-head">
-          <span className="oz-pill">11+ Programme</span>
-          <h2 id="offer-title">What we offer</h2>
-          <p className="oz-lead">
+    <section className="offer-page" aria-labelledby="offer-title">
+      <div className="offer-wrap">
+        <header className="offer-head">
+          <span className="offer-pill">11+ Programme</span>
+          <h1 id="offer-title">What We Offer</h1>
+          <p className="offer-lead">
             Expert-led 11+ preparation with the structure, practice and feedback
             that turns preparation into performance.
           </p>
         </header>
 
-        <div className="oz-grid">
-          <article className="oz-card">
-            <h3>Core Package</h3>
-            <ul className="oz-list">
-              <li>Expert 11+ tutors who know the exam inside-out</li>
-              <li>Full coverage: Verbal, Non-Verbal, Maths & English</li>
-              <li>Small-group or 1:1 options to suit your child</li>
-              <li>Exam-focused resources, mock papers & insider tips</li>
+        <div className="offer-grid">
+          <article className="offer-card" aria-labelledby="offer-left">
+            <h2 id="offer-left">What We Offer</h2>
+            <ul className="tick-list">
+              <li><strong>Expert 11+ Tutors</strong> – Specialists who know the exam inside-out.</li>
+              <li><strong>Full Subject Coverage</strong> – Verbal, Non-Verbal, Maths, and English.</li>
+              <li><strong>Small Group & 1:1 Options</strong> – Choose the style that works best.</li>
+              <li><strong>Exam-Focused Resources</strong> – Practice papers, mock exams, and insider tips.</li>
             </ul>
           </article>
 
-          <article className="oz-card">
-            <h3>How we get results</h3>
-            <ul className="oz-list">
-              <li>Confidence building and coached mindset</li>
-              <li>Targeted practice on high-impact topics</li>
-              <li>Mocks in real exam conditions to reduce nerves</li>
-              <li>Strategy coaching: timing & question choice</li>
-              <li>Regular parental updates & progress tracking</li>
+          <article className="offer-card" aria-labelledby="offer-right">
+            <h2 id="offer-right">How We Get The Best Results</h2>
+            <ul className="tick-list">
+              <li><strong>Confidence Building</strong> – Boosting skills and self-belief.</li>
+              <li><strong>Targeted Practice</strong> – Focus on the areas that make the biggest difference.</li>
+              <li><strong>Real Exam Conditions</strong> – Mock tests to reduce nerves.</li>
+              <li><strong>Strategy Coaching</strong> – Time management & problem-solving shortcuts.</li>
+              <li><strong>Parental Updates</strong> – Keeping you in the loop every step of the way.</li>
             </ul>
           </article>
         </div>
 
-        <div className="oz-cta">
-          <a className="oz-btn" href="/contact">Book a free call</a>
-          <p className="oz-note">We’ll map a plan that fits your child’s goals and timeline.</p>
+        <div className="offer-cta">
+          <a className="offer-btn" href="/contact">📘 Contact Us </a>
+          <p className="offer-note">We’ll map a plan that fits your child’s goals and timeline.</p>
         </div>
+      </div>
+
+      {/* Decorative bottom wave */}
+      <div className="offer-wave" aria-hidden="true">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+          <path
+            fill="#ffffff"
+            d="M0,32L48,48C96,64,192,96,288,96C384,96,480,64,576,53.3C672,43,768,53,864,69.3C960,85,1056,107,1152,112C1248,117,1344,107,1392,101.3L1440,96L1440,120L0,120Z"
+          />
+        </svg>
       </div>
     </section>
   );
