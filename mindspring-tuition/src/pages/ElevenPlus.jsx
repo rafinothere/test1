@@ -1,8 +1,9 @@
 // src/pages/ElevenPlus.jsx
 import React from "react";
+import { Link } from "react-router-dom";          // ✅ use Link for internal navigation
 import "../components/ElevenPlus.css";
 
-// ✅ use the images that exist in /src/assets
+// images
 import heroImg from "../assets/student-boy.jpg";
 import tutorImg from "../assets/english.jpg";
 import onlineClassImg from "../assets/examtechnique.jpg";
@@ -48,7 +49,8 @@ export default function ElevenPlus() {
             </div>
 
             <div className="ep-cta">
-              <a className="ep-btn" href="/contact">📘 Contact Us</a>
+              {/* ⬇️ Use Link instead of <a href> */}
+              <Link className="ep-btn" to="/contact">📘 Contact Us</Link>
               <span className="ep-note">Let’s plan your child’s 11+ journey.</span>
             </div>
           </div>
