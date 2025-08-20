@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter as Router, Routes, Route } from "react-router-dom"; // ✅ Use HashRouter
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/navbar";
 import Footer from "./components/Footer";
@@ -44,3 +44,5 @@ export default function App() {
     </Router>
   );
 }
+
+
