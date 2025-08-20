@@ -44,7 +44,7 @@ export default function Maths() {
             </div>
 
             <div className="m-cta">
-              <a className="m-btn" href="/contact">📘 Contact Us </a>
+              <Link to="/contact" className="about-btn">📘 Contact Us</Link>
               <p className="m-note">We’ll map a plan that fits your child’s goals and timeline.</p>
             </div>
           </div>

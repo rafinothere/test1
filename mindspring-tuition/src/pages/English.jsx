@@ -42,7 +42,7 @@ export default function English() {
             </div>
 
             <div className="eng-cta">
-              <a className="eng-btn" href="/contact">📘 Contact Us </a>
+              <Link to="/contact" className="about-btn">📘 Contact Us</Link>
               <span className="eng-note">We’ll map a plan that fits your child’s goals & timeline.</span>
             </div>
           </div>

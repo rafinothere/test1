@@ -1,4 +1,6 @@
+// src/pages/Offer.jsx
 import React from "react";
+import { Link } from "react-router-dom";   // ✅ Import Link
 import "./Offer.css";
 
 export default function Offer() {
@@ -38,8 +40,11 @@ export default function Offer() {
         </div>
 
         <div className="offer-cta">
-          <a className="offer-btn" href="/contact">📘 Contact Us </a>
-          <p className="offer-note">We’ll map a plan that fits your child’s goals and timeline.</p>
+          {/* ✅ Changed href to Link */}
+          <Link className="offer-btn" to="/contact">📘 Contact Us</Link>
+          <p className="offer-note">
+            We’ll map a plan that fits your child’s goals and timeline.
+          </p>
         </div>
       </div>
 
@@ -55,4 +60,3 @@ export default function Offer() {
     </section>
   );
 }
-
