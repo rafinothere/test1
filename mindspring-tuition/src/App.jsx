@@ -1,23 +1,24 @@
+// src/App.jsx
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
-import Navbar from "./components/navbar";
-import Footer from "./components/Footer";
-import HeroSection from "./components/HeroSection";
+import Navbar from "./components/Navbar.jsx";   // 👈 uppercase "N" (case matters!)
+import Footer from "./components/Footer.jsx";   // check if you actually have Footer.jsx
+import HeroSection from "./components/HeroSection.jsx";
 
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Services from "./pages/Services";
-import Contact from "./pages/Contact";
-import ElevenPlus from "./pages/ElevenPlus";
-import OfferPage from "./pages/Offer"; // renamed import for clarity
-import English from "./pages/English"; 
-import Maths from "./pages/Maths";
-import Science from "./pages/Science"; // ✅
+import Home from "./pages/Home.jsx";
+import About from "./pages/About.jsx";
+import Services from "./pages/Services.jsx";
+import Contact from "./pages/Contact.jsx";
+import ElevenPlus from "./pages/ElevenPlus.jsx";
+import OfferPage from "./pages/Offer.jsx";
+import English from "./pages/English.jsx";
+import Maths from "./pages/Maths.jsx";
+import Science from "./pages/Science.jsx";
 
 export default function App() {
   return (
-    <Router>
+    <>
       <Navbar />
 
       <Routes>
@@ -37,12 +38,10 @@ export default function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/english" element={<English />} />
         <Route path="/maths" element={<Maths />} />
-        <Route path="/science" element={<Science />} />  {/* ✅ */}
+        <Route path="/science" element={<Science />} />
       </Routes>
 
       <Footer />
-    </Router>
+    </>
   );
 }
-
-

@@ -1,5 +1,6 @@
 // src/pages/ElevenPlus.jsx
 import React from "react";
+import { Link } from "react-router-dom";
 import "../components/ElevenPlus.css";
 
 // ✅ use the images that exist in /src/assets
@@ -48,7 +49,7 @@ export default function ElevenPlus() {
             </div>
 
             <div className="ep-cta">
-              <a className="ep-btn" href="/contact">📘 Contact Us</a>
+              <Link className="ep-btn" to="/contact">📘 Contact Us</Link>
               <span className="ep-note">Let’s plan your child’s 11+ journey.</span>
             </div>
           </div>
@@ -74,4 +75,3 @@ export default function ElevenPlus() {
     </section>
   );
 }
-
