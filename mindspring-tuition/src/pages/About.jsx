@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";   // 👈 ADD THIS
 import "./About.css";
 
 export default function About() {
@@ -60,12 +61,10 @@ export default function About() {
 
         {/* CTA */}
         <div className="about-cta">
-          <a className="about-btn" href="/contact">📘 Contact Us </a>
+          <Link className="about-btn" to="/contact">📘 Contact Us </Link>
           <p className="about-note">Let’s map out the right plan for your child.</p>
         </div>
       </div>
     </section>
   );
 }
-
-
