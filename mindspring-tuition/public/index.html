@@ -1,12 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mindspring Tuition</title>
+    <meta charset="utf-8" />
+    <title>Redirecting...</title>
+    <script type="text/javascript">
+      // Preserve full path when redirecting to index.html
+      (function() {
+        var redirectTo = window.location.protocol + '//' + window.location.host + '/';
+        var pathname = window.location.pathname;
+        // Push the path into the hash so React Router can read it
+        window.location.replace(redirectTo + '#!' + pathname);
+      })();
+    </script>
   </head>
   <body>
-    <div id="root"></div> 
+    Redirecting...
   </body>
 </html>
-
