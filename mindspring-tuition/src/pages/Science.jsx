@@ -45,7 +45,7 @@ export default function Science() {
             </div>
 
             <div className="sci-cta">
-              <Link to="/contact" className="about-btn">📘 Contact Us</Link>
+              <a className="sci-btn" href="/contact">📘 Contact Us </a>
               <p className="sci-note">We’ll map a plan that fits your child’s goals and timeline.</p>
             </div>
           </div>

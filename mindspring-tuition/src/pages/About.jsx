@@ -60,8 +60,7 @@ export default function About() {
 
         {/* CTA */}
         <div className="about-cta">
-          <Link to="/contact" className="about-btn">📘 Contact Us</Link>
-
+          <a className="about-btn" href="/contact">📘 Contact Us </a>
           <p className="about-note">Let’s map out the right plan for your child.</p>
         </div>
       </div>
