@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";  // ← ADDED THIS LINE
 import "./Science.css";
 import scienceImg from "../assets/science.jpg";
 
@@ -13,7 +14,7 @@ export default function Science() {
           <h1 id="sci-title">Science Tuition</h1>
           <p className="sci-lead">
             Build secure understanding across Biology, Chemistry and Physics.
-            Lessons target your child’s level and the exam board focus (GL, CEM,
+            Lessons target your child's level and the exam board focus (GL, CEM,
             ISEB & independent schools) with clear models, lots of practice and
             feedback.
           </p>
@@ -37,7 +38,7 @@ export default function Science() {
               <h2 className="sci-sub">How we teach</h2>
               <ul className="sci-checks">
                 <li>Short, crystal-clear explanations then guided practice</li>
-                <li>Scaffolded model answers that show “what great looks like”</li>
+                <li>Scaffolded model answers that show "what great looks like"</li>
                 <li>Retrieval & timed drills to build fluency and pace</li>
                 <li>Regular low-stakes quizzes and exam-style questions</li>
                 <li>Personalised feedback and simple next-step targets</li>
@@ -45,8 +46,8 @@ export default function Science() {
             </div>
 
             <div className="sci-cta">
-              <a className="sci-btn" href="/contact">📘 Contact Us </a>
-              <p className="sci-note">We’ll map a plan that fits your child’s goals and timeline.</p>
+              <Link className="sci-btn" to="/contact">📘 Contact Us </Link>  {/* ← CHANGED THIS LINE */}
+              <p className="sci-note">We'll map a plan that fits your child's goals and timeline.</p>
             </div>
           </div>
 
@@ -58,4 +59,3 @@ export default function Science() {
     </section>
   );
 }
-

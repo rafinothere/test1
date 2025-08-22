@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";  // ← ADDED THIS LINE
 import "./Maths.css";
 import mathsImage from "../assets/maths-tutoring.jpg"; // adjust if your filename differs
 
@@ -12,7 +13,7 @@ export default function Maths() {
           <h1 id="math-title">Maths Tuition</h1>
           <p className="m-lead">
             Build rock-solid number sense, fluent methods and confident problem
-            solving. Lessons are tailored to your child’s level and exam board
+            solving. Lessons are tailored to your child's level and exam board
             (GL, CEM, ISEB & independent schools).
           </p>
         </header>
@@ -44,8 +45,8 @@ export default function Maths() {
             </div>
 
             <div className="m-cta">
-              <a className="m-btn" href="/contact">📘 Contact Us </a>
-              <p className="m-note">We’ll map a plan that fits your child’s goals and timeline.</p>
+              <Link className="m-btn" to="/contact">📘 Contact Us </Link>  {/* ← CHANGED THIS LINE */}
+              <p className="m-note">We'll map a plan that fits your child's goals and timeline.</p>
             </div>
           </div>
 
@@ -81,4 +82,3 @@ export default function Maths() {
     </section>
   );
 }
-

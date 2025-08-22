@@ -16,6 +16,16 @@ import English from "./pages/English.jsx";
 import Maths from "./pages/Maths.jsx";
 import Science from "./pages/Science.jsx";
 
+// ← ADDED: Import favicon from assets
+import favicon from './assets/mindspring-logo.png';
+
+// ← ADDED: Set favicon dynamically
+const link = document.querySelector("link[rel~='icon']") || document.createElement('link');
+link.type = 'image/png';
+link.rel = 'icon';
+link.href = favicon;
+document.head.appendChild(link);
+
 export default function App() {
   return (
     <>
