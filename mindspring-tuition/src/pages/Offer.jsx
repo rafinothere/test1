@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";  // ← ADDED THIS LINE
 import "./Offer.css";
 
 export default function Offer() {
@@ -39,8 +38,8 @@ export default function Offer() {
         </div>
 
         <div className="offer-cta">
-          <Link className="offer-btn" to="/contact">📘 Contact Us </Link>  {/* ← CHANGED THIS LINE */}
-          <p className="offer-note">We'll map a plan that fits your child's goals and timeline.</p>
+          <a className="offer-btn" href="/contact">📘 Contact Us </a>
+          <p className="offer-note">We’ll map a plan that fits your child’s goals and timeline.</p>
         </div>
       </div>
 
@@ -56,3 +55,4 @@ export default function Offer() {
     </section>
   );
 }
+

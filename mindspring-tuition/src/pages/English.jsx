@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";  // ← ADDED THIS LINE
 import "./English.css";
 import englishImg from "../assets/english.jpg"; // already in your repo
 
@@ -13,7 +12,7 @@ export default function English() {
           <h1 id="eng-title">English Tuition</h1>
           <p className="eng-lead">
             Build clear comprehension, confident grammar and expressive writing.
-            Lessons are tailored to your child's level and exam board (GL, CEM,
+            Lessons are tailored to your child’s level and exam board (GL, CEM,
             ISEB & independent schools).
           </p>
         </header>
@@ -36,15 +35,15 @@ export default function English() {
               <h2 className="eng-sub">How we teach</h2>
               <ul className="eng-checks">
                 <li>Short, high-impact explanations then guided practice</li>
-                <li>Model answers + scaffolds that show "what good looks like"</li>
+                <li>Model answers + scaffolds that show “what good looks like”</li>
                 <li>Timed drills to build accuracy and pace</li>
                 <li>Personalised feedback and next-step targets</li>
               </ul>
             </div>
 
             <div className="eng-cta">
-              <Link className="eng-btn" to="/contact">📘 Contact Us </Link>  {/* ← CHANGED THIS LINE */}
-              <span className="eng-note">We'll map a plan that fits your child's goals & timeline.</span>
+              <a className="eng-btn" href="/contact">📘 Contact Us </a>
+              <span className="eng-note">We’ll map a plan that fits your child’s goals & timeline.</span>
             </div>
           </div>
 
@@ -57,7 +56,7 @@ export default function English() {
         <div className="eng-mini">
           <article className="mini-card">
             <h3>Comprehension Clinics</h3>
-            <p>Teach inference, evidence selection and "explain how" techniques for full-mark answers.</p>
+            <p>Teach inference, evidence selection and “explain how” techniques for full-mark answers.</p>
           </article>
           <article className="mini-card">
             <h3>Grammar & Style</h3>
@@ -82,3 +81,4 @@ export default function English() {
     </section>
   );
 }
+
